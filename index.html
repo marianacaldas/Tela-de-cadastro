@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Tela de cadastro</title>
+</head>
+<body>
+    <section id="container_menu">
+            <h1>Cadastre-se para acessar o sistema</h1>
+            <form id="registro_form">
+                <div class="box_inteiro">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" data-min-length="2" data-email-validate>
+                </div>
+                <div class="box_metade spacing">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" placeholder="Digite o seu nome" data-required data-min-length="3" data-max-length="16">
+                </div>
+                <div class="box_metade">
+                    <label for="lastname">Sobrenome</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Digite o seu sobrenome" data-required data-only-letters>
+                </div>
+                <div class="box_metade spacing">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" placeholder="Digite a sua senha" data-password-validate data-required>
+                </div>
+                <div class="box_metade">
+                    <label for="passconfirmation">Confirme a sua senha</label>
+                    <input type="text" name="passconfirmation" id="passconfirmation" placeholder="Confirme a sua senha" data-equal="password">
+                </div>
+                <div class="box_inteiro">
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement" id="agreement">Eu li e aceito os <a href="#">termos de uso</a></label>
+                </div>
+                <div class="box_inteiro">
+                    <input type="submit" value="Registrar" id="btn_submit">
+                </div>
+            </form>
+    </section>
+    <p class="erro_validacao template"></p>
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
